@@ -313,7 +313,11 @@ impl BaseType {
         })
     }
 
-    pub fn type_(&self) -> &str {
+    pub fn pkg_name(&self) -> Option<&str> {
+        self.pkg_name.as_deref()
+    }
+
+    pub fn type_name(&self) -> &str {
         &self.type_
     }
 
@@ -468,7 +472,7 @@ impl Constant {
         })
     }
 
-    pub fn type_(&self) -> &str {
+    pub fn type_name(&self) -> &str {
         &self.type_
     }
 
